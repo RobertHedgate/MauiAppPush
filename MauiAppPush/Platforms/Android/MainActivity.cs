@@ -27,8 +27,11 @@ namespace MauiAppPush
             try
             {
                 Firebase.FirebaseApp.InitializeApp(this);
-                // Start the SDK
-                hub = NotificationHubClient.CreateClientFromConnectionString("ListenConnectionString", "NotificationHubName");
+                // Get this from Azure Notification Hub
+                var hubName = "<NotificationHubName>";
+                var connectionString = "<ListenConnectionString>"; // Can be found in Access policy. Use Listen connection
+
+                hub = NotificationHubClient.CreateClientFromConnectionString(connectionString, hubName);
 
                 CreateNotificationChannel();
             }
