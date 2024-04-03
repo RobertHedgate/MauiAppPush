@@ -2,7 +2,8 @@
 This repo contains some boilerplate code on how to make push from azure to work.
 
 For Ios you don´t need anything else in your app except selecting the correct certificate when you build.
-Android you need the Google-Service.json file you download from you firebase console.
+
+Android you need the google-service.json file you download from you firebase console and add it directly under Android folder.
 
 Here are a tutorial on iOS. https://learn.microsoft.com/en-us/azure/notification-hubs/ios-sdk-get-started
 
