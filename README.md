@@ -1,4 +1,11 @@
 # MauiAppPush
-This repo contains some boilerplate code on how to make push from azure to work. It is not complete and need correct certificats and all that stuff from Apple and Google.
+This repo contains some boilerplate code on how to make push from azure to work.
+
+For Ios you don´t need anything else in your app except selecting the correct certificate when you build.
+Android you need the Google-Service.json file you download from you firebase console.
+
+Here are a tutorial on iOS. https://learn.microsoft.com/en-us/azure/notification-hubs/ios-sdk-get-started
+Setting up Android FCM V1 https://learn.microsoft.com/en-us/azure/notification-hubs/firebase-migration-rest
+If GoogleServieJson doesn´t show up as build action https://github.com/dotnet/maui/issues/14486
 
 In my real project I use a dependency injection service to hold my hub so I can change tags from the app. Just call CreateOrUpdateInstallationAsync with the new tags when the changes.
